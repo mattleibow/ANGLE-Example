@@ -1,27 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-using GLchar = System.Byte;
 using GLenum = System.UInt32;
-using GLboolean = System.Byte;
-using GLbitfield = System.UInt32;
-using GLbyte = System.SByte;
 using GLshort = System.UInt16;
 using GLint = System.Int32;
-using GLubyte = System.Byte;
-using GLushort = System.UInt16;
 using GLuint = System.UInt32;
 using GLsizei = System.Int32;
 using GLfloat = System.Single;
-using GLclampf = System.Single;
-using GLdouble = System.Double;
-using GLclampd = System.Double;
-using GLintptr = System.Int64;
-using GLsizeiptr = System.Int64;
-using System.Numerics;
 
 namespace ManagedANGLE
 {
