@@ -1,8 +1,7 @@
 ﻿#pragma once
 
 #include "app.g.h"
-#include "OpenGLES.h"
-#include "openglespage.xaml.h"
+#include "MainPage.xaml.h"
 
 namespace UniversalANGLE
 {
@@ -13,7 +12,6 @@ namespace UniversalANGLE
         virtual void OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ e) override;
 
     private:
-        OpenGLESPage^ mPage;
-        OpenGLES mOpenGLES;
+        MainPage ^ mPage;
     };
 }

@@ -17,7 +17,7 @@
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="OpenGLES.cpp" />
     <ClCompile Include="SimpleRenderer.cpp" />
-    <ClCompile Include="OpenGLESPage.xaml.cpp" />
+    <ClCompile Include="MainPage.xaml.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -25,7 +25,7 @@
     <ClInclude Include="MathHelper.h" />
     <ClInclude Include="OpenGLES.h" />
     <ClInclude Include="SimpleRenderer.h" />
-    <ClInclude Include="OpenGLESPage.xaml.h" />
+    <ClInclude Include="MainPage.xaml.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png">
@@ -58,6 +58,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="OpenGLESPage.xaml" />
+    <Page Include="MainPage.xaml" />
   </ItemGroup>
 </Project>

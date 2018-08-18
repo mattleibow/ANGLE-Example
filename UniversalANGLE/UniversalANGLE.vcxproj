@@ -98,6 +98,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <PackageCertificateKeyFile>UniversalANGLE_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>C3EBF267759CD57F05C87A42535E5CCFC26AA99E</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -138,8 +139,8 @@
   <ItemGroup>
     <ClInclude Include="MathHelper.h" />
     <ClInclude Include="OpenGLES.h" />
-    <ClInclude Include="OpenGLESPage.xaml.h">
-      <DependentUpon>OpenGLESPage.xaml</DependentUpon>
+    <ClInclude Include="MainPage.xaml.h">
+      <DependentUpon>MainPage.xaml</DependentUpon>
     </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
@@ -151,7 +152,7 @@
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="OpenGLESPage.xaml" />
+    <Page Include="MainPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -174,8 +175,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="OpenGLES.cpp" />
-    <ClCompile Include="OpenGLESPage.xaml.cpp">
-      <DependentUpon>OpenGLESPage.xaml</DependentUpon>
+    <ClCompile Include="MainPage.xaml.cpp">
+      <DependentUpon>MainPage.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

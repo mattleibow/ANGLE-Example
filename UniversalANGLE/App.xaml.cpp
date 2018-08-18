@@ -19,7 +19,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 
     if (mPage == nullptr)
     {
-        mPage = ref new OpenGLESPage(&mOpenGLES);
+        mPage = ref new MainPage();
     }
 
     // Place the page in the current window and ensure that it is active.

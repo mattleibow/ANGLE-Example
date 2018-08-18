@@ -37,7 +37,7 @@ GLuint CompileShader(GLenum type, const std::string &source)
         glGetShaderInfoLog(shader, (GLsizei)infoLog.size(), NULL, infoLog.data());
 
         std::wstring errorMessage = std::wstring(L"Shader compilation failed: ");
-        errorMessage += std::wstring(infoLog.begin(), infoLog.end()); 
+        errorMessage += std::wstring(infoLog.begin(), infoLog.end());
 
         throw Exception::CreateException(E_FAIL, ref new Platform::String(errorMessage.c_str()));
     }
@@ -85,7 +85,7 @@ GLuint CompileProgram(const std::string &vsSource, const std::string &fsSource)
         glGetProgramInfoLog(program, (GLsizei)infoLog.size(), NULL, infoLog.data());
 
         std::wstring errorMessage = std::wstring(L"Program link failed: ");
-        errorMessage += std::wstring(infoLog.begin(), infoLog.end()); 
+        errorMessage += std::wstring(infoLog.begin(), infoLog.end());
 
         throw Exception::CreateException(E_FAIL, ref new Platform::String(errorMessage.c_str()));
     }
@@ -93,10 +93,8 @@ GLuint CompileProgram(const std::string &vsSource, const std::string &fsSource)
     return program;
 }
 
-SimpleRenderer::SimpleRenderer() :
-    mWindowWidth(0),
-    mWindowHeight(0),
-    mDrawCount(0)
+SimpleRenderer::SimpleRenderer()
+    : mWindowWidth(0), mWindowHeight(0), mDrawCount(0)
 {
     // Vertex Shader source
     const std::string vs = STRING
@@ -132,7 +130,7 @@ SimpleRenderer::SimpleRenderer() :
     mModelUniformLocation = glGetUniformLocation(mProgram, "uModelMatrix");
     mViewUniformLocation = glGetUniformLocation(mProgram, "uViewMatrix");
     mProjUniformLocation = glGetUniformLocation(mProgram, "uProjMatrix");
-    
+
     // Then set up the cube geometry.
     GLfloat vertexPositions[] =
     {
@@ -179,10 +177,10 @@ SimpleRenderer::SimpleRenderer() :
 
         2, 7, 6, // +y
         2, 3, 7,
-              
+
         0, 6, 4, // -z
         0, 2, 6,
-              
+
         1, 7, 3, // +z
         1, 5, 7,
     };
