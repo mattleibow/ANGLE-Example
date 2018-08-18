@@ -81,7 +81,7 @@ void main()
 
             Gles.glGenBuffers(1, out mVertexPositionBuffer);
             Gles.glBindBuffer(Gles.GL_ARRAY_BUFFER, mVertexPositionBuffer);
-            Gles.glBufferData(Gles.GL_ARRAY_BUFFER, vertexPositions.Length, vertexPositions, Gles.GL_STATIC_DRAW);
+            Gles.glBufferData(Gles.GL_ARRAY_BUFFER, vertexPositions, Gles.GL_STATIC_DRAW);
 
             GLfloat[] vertexColors = new[]
             {
@@ -97,7 +97,7 @@ void main()
 
             Gles.glGenBuffers(1, out mVertexColorBuffer);
             Gles.glBindBuffer(Gles.GL_ARRAY_BUFFER, mVertexColorBuffer);
-            Gles.glBufferData(Gles.GL_ARRAY_BUFFER, vertexColors.Length, vertexColors, Gles.GL_STATIC_DRAW);
+            Gles.glBufferData(Gles.GL_ARRAY_BUFFER, vertexColors, Gles.GL_STATIC_DRAW);
 
             GLshort[] indices = new GLshort[]
             {
@@ -122,7 +122,7 @@ void main()
 
             Gles.glGenBuffers(1, out mIndexBuffer);
             Gles.glBindBuffer(Gles.GL_ELEMENT_ARRAY_BUFFER, mIndexBuffer);
-            Gles.glBufferData(Gles.GL_ELEMENT_ARRAY_BUFFER, indices.Length, indices, Gles.GL_STATIC_DRAW);
+            Gles.glBufferData(Gles.GL_ELEMENT_ARRAY_BUFFER, indices, Gles.GL_STATIC_DRAW);
         }
 
         public void Dispose()
