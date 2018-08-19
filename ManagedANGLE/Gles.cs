@@ -66,6 +66,20 @@ namespace ManagedANGLE
         public const GLenum GL_FLOAT = 0x1406;
         public const GLenum GL_FIXED = 0x140C;
 
+        public const GLenum GL_FRAMEBUFFER_BINDING = 0x8CA6;
+        public const GLenum GL_RENDERBUFFER_BINDING = 0x8CA7;
+
+        public const GLenum GL_SUBPIXEL_BITS = 0x0D50;
+        public const GLenum GL_RED_BITS = 0x0D52;
+        public const GLenum GL_GREEN_BITS = 0x0D53;
+        public const GLenum GL_BLUE_BITS = 0x0D54;
+        public const GLenum GL_ALPHA_BITS = 0x0D55;
+        public const GLenum GL_DEPTH_BITS = 0x0D56;
+        public const GLenum GL_STENCIL_BITS = 0x0D57;
+
+        public const GLenum GL_SAMPLES = 0x80A9;
+
+
         [DllImport(libGLESv2)]
         public static extern GLenum glGetError();
 
@@ -192,6 +206,9 @@ namespace ManagedANGLE
 
         [DllImport(libGLESv2)]
         public static extern void glVertexAttribPointer(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, IntPtr pointer);
+
+        [DllImport(libGLESv2)]
+        public static extern void glGetIntegerv(GLenum pname, out GLint data);
 
 #pragma warning restore IDE1006 // Naming Styles
     }

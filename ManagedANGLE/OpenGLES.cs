@@ -1,6 +1,8 @@
 ﻿using System;
+using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml.Controls;
+using WindowsRuntimeExtensions;
 
 using EGLConfig = System.IntPtr;
 using EGLContext = System.IntPtr;
@@ -30,7 +32,7 @@ namespace ManagedANGLE
             Cleanup();
         }
 
-        public EGLSurface CreateSurface(SwapChainPanel panel)
+        public EGLSurface CreateSurface(SwapChainPanel panel, Size? renderSurfaceSize, float? resolutionScale)
         {
             if (panel == null)
             {
@@ -48,10 +50,20 @@ namespace ManagedANGLE
             };
 
             // Create a PropertySet and initialize with the EGLNativeWindowType.
-            PropertySet surfaceCreationProperties = new PropertySet
+            PropertySet surfaceCreationProperties = new PropertySet();
+            surfaceCreationProperties.Add(Egl.EGLNativeWindowTypeProperty, panel);
+
+            // If a render surface size is specified, add it to the surface creation properties
+            if (renderSurfaceSize.HasValue)
             {
-                { Egl.EGLNativeWindowTypeProperty, panel }
-            };
+                PropertySetExtensions.AddSize(surfaceCreationProperties, Egl.EGLRenderSurfaceSizeProperty, renderSurfaceSize.Value);
+            }
+
+            // If a resolution scale is specified, add it to the surface creation properties
+            if (resolutionScale.HasValue)
+            {
+                PropertySetExtensions.AddSingle(surfaceCreationProperties, Egl.EGLRenderResolutionScaleProperty, resolutionScale.Value);
+            }
 
             surface = Egl.eglCreateWindowSurface(mEglDisplay, mEglConfig, surfaceCreationProperties, surfaceAttributes);
             if (surface == Egl.EGL_NO_SURFACE)

@@ -79,8 +79,11 @@ namespace ManagedANGLE
 
         public const int EGL_FIXED_SIZE_ANGLE = 0x3201;
 
+        // The following properties can be set on the CoreApplication to support additional
+        // ANGLE configuration options.
         public const string EGLNativeWindowTypeProperty = "EGLNativeWindowTypeProperty";
-
+        public const string EGLRenderSurfaceSizeProperty = "EGLRenderSurfaceSizeProperty";
+        public const string EGLRenderResolutionScaleProperty = "EGLRenderResolutionScaleProperty";
 
         [DllImport(libEGL)]
         private static extern IntPtr eglGetProcAddress([MarshalAs(UnmanagedType.LPStr)] string procname);

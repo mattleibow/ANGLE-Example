@@ -65,7 +65,20 @@ namespace ManagedANGLE
             {
                 // The app can configure the the SwapChainPanel which may boost performance.
                 // By default, this template uses the default configuration.
-                mRenderSurface = mOpenGLES.CreateSurface(swapChainPanel);
+                mRenderSurface = mOpenGLES.CreateSurface(swapChainPanel, null, null);
+
+                // You can configure the SwapChainPanel to render at a lower resolution and be scaled up to
+                // the swapchain panel size. This scaling is often free on mobile hardware.
+                //
+                // One way to configure the SwapChainPanel is to specify precisely which resolution it should render at.
+                // Size customRenderSurfaceSize = new Size(800, 600);
+                // mRenderSurface = mOpenGLES.CreateSurface(swapChainPanel, customRenderSurfaceSize, null);
+                //
+                // Another way is to tell the SwapChainPanel to render at a certain scale factor compared to its size.
+                // e.g. if the SwapChainPanel is 1920x1280 then setting a factor of 0.5f will make the app render at 960x640
+                // float customResolutionScale = 2;
+                // mRenderSurface = mOpenGLES.CreateSurface(swapChainPanel, null, customResolutionScale);
+                //
             }
         }
 

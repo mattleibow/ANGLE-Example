@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UniversalANGLE", "Universal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedANGLE", "ManagedANGLE\ManagedANGLE.csproj", "{FFB181A3-1E7B-4A8F-A632-FCB1FCA23758}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WindowsRuntimeExtensions", "WindowsRuntimeExtensions\WindowsRuntimeExtensions.vcxproj", "{D3C01B6D-F4ED-4E58-BC6E-B0F07DD98022}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -53,6 +55,18 @@ Global
 		{FFB181A3-1E7B-4A8F-A632-FCB1FCA23758}.Release|x86.ActiveCfg = Release|x86
 		{FFB181A3-1E7B-4A8F-A632-FCB1FCA23758}.Release|x86.Build.0 = Release|x86
 		{FFB181A3-1E7B-4A8F-A632-FCB1FCA23758}.Release|x86.Deploy.0 = Release|x86
+		{D3C01B6D-F4ED-4E58-BC6E-B0F07DD98022}.Debug|ARM.ActiveCfg = Debug|ARM
+		{D3C01B6D-F4ED-4E58-BC6E-B0F07DD98022}.Debug|ARM.Build.0 = Debug|ARM
+		{D3C01B6D-F4ED-4E58-BC6E-B0F07DD98022}.Debug|x64.ActiveCfg = Debug|x64
+		{D3C01B6D-F4ED-4E58-BC6E-B0F07DD98022}.Debug|x64.Build.0 = Debug|x64
+		{D3C01B6D-F4ED-4E58-BC6E-B0F07DD98022}.Debug|x86.ActiveCfg = Debug|Win32
+		{D3C01B6D-F4ED-4E58-BC6E-B0F07DD98022}.Debug|x86.Build.0 = Debug|Win32
+		{D3C01B6D-F4ED-4E58-BC6E-B0F07DD98022}.Release|ARM.ActiveCfg = Release|ARM
+		{D3C01B6D-F4ED-4E58-BC6E-B0F07DD98022}.Release|ARM.Build.0 = Release|ARM
+		{D3C01B6D-F4ED-4E58-BC6E-B0F07DD98022}.Release|x64.ActiveCfg = Release|x64
+		{D3C01B6D-F4ED-4E58-BC6E-B0F07DD98022}.Release|x64.Build.0 = Release|x64
+		{D3C01B6D-F4ED-4E58-BC6E-B0F07DD98022}.Release|x86.ActiveCfg = Release|Win32
+		{D3C01B6D-F4ED-4E58-BC6E-B0F07DD98022}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

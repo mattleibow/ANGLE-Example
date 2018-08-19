@@ -136,6 +136,12 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.4" />
     <PackageReference Include="ANGLE.WindowsStore" Version="2.1.13" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WindowsRuntimeExtensions\WindowsRuntimeExtensions.vcxproj">
+      <Project>{d3c01b6d-f4ed-4e58-bc6e-b0f07dd98022}</Project>
+      <Name>WindowsRuntimeExtensions</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
